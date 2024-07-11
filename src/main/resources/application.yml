@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://35.224.251.97/test_database
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      data-source-properties:
+        socketFactory: com.google.cloud.sql.mysql.SocketFactory
+        cloudSqlInstance: gke-practice-428011:us-central1:spring-musql-practice
+
+cloud:
+  gcp:
+    sql:
+      database-name: test_database
+      instance-connection-name: gke-practice-428011:us-central1:spring-musql-practice
